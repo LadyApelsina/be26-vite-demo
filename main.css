@@ -1,0 +1,235 @@
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('./img/backG1.jpg');
+/*    backdrop-filter: blur(2px);*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    min-width: 100%;
+    background-color: rgba(255, 255, 255, 0.568);
+    backdrop-filter: blur(3px);
+}
+
+h1 {
+/*    display: flex;
+    justify-self: center;*/
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #F39C19, #A463BF, #c4d04e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo {
+    display: flex;
+
+}
+
+#asideWrapper{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(77, 71, 71, 0.616);
+    width: 100%;
+    height: 100%;
+/*    padding: 20px;
+    border-radius: 10px;*/
+/*    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    width: 300px;*/
+    position: fixed; /* redan rätt */
+    z-index: 9999;   /* lägger den över ALLT */
+/*    position: relative;
+    border: 1px solid #c78d22;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    box-shadow: 1px  5px 9px #c78d22;
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;*/
+}
+
+#asideDiv {
+    background-color: pink;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+/*    padding: 20px;
+    border-radius: 10px;*/
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    width: 300px;
+    position: fixed; /* redan rätt */
+    z-index: 9999;
+}
+
+#asideBtn {
+    margin: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#closeAsideBtn {
+    position: absolute;
+    top: 5px;
+    right: 7px; 
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#allBooks {
+    background-color: #c78d227c;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.bookWrapper {
+    border: 2px solid #fffdfd;
+    background-color: #c78d22ee;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 220px;
+/*    margin: 10px;*/
+}
+/*
+.test {
+    background-color: pink;
+}
+*/
+
+.likeBook {
+    color: pink;
+    background-color: greenyellow;
+}
+
+.fa-regular.fa-heart {
+    color: #fffefea1;
+    font-size: 1.1rem;
+}
+
+.fa-regular.fa-heart:hover {
+    color: #d11e1e;
+}
+/*
+.fa-regular.fa-heart:active {
+    color: #1ed127;
+}
+*/
+/*
+.activeHeart {
+    color: #d11e1e;
+    font-size: 1.1rem;
+}
+*/
+#imgDiv {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+#readBtn, .readBtn {
+    background-color: #c4d04e;
+}
+
+.readBtnActive {
+    background-color: #ff8c00;   /* orange highlight */
+    color: white;
+    border: 2px solid #cc6f00;
+    transform: scale(1.05);
+}
+/*
+#review {
+    margin-top: 10px;
+}
+    */
+
+/*-----------TEST-----*/
+.review {
+    display: none;
+    gap: 4px;
+    margin: 10px 0;
+    justify-content: flex-start; /* ikonerna börjar nära boken */
+}
+
+.review i {
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease, border 0.2s ease;
+}
+
+.review i:hover {
+    transform: scale(1.2);
+    color: #ffb347;
+    
+}
+
+.review i.iconActive {
+    color: #ff8c00;
+/*    border: 2px solid #ff8c00;*/
+    padding: 2px;
+    border-radius: 6px;
+    transform: scale(1.25) rotate(-5deg);
+    filter: drop-shadow(0 0 1px #ff8c00);
+}
+/*-----------TEST SLUT-----*/
+
+.imgDiv {
+
+}
+
+.bookImg {
+    height: 130px;
+    margin: 10px 0;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+
+.deleteBook {
+    background-color: transparent;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#savedBooks {
+    background-color: rgba(255, 255, 255, 0.568);
+    backdrop-filter: blur(3px);
+}
+
+.haveReadBtn {
+
+}
+
+.haveReadBtn:active {
+
+}
+
+h3 {
+    text-align: center;
+    font-size: 2rem;
+background: linear-gradient(135deg, #F39C19, #A463BF, #c4d04e);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
