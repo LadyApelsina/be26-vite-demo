@@ -1,7 +1,7 @@
 body {
     width: 100vw;
     min-height: 100vh;
-    background-image: url('./img/backG1.jpg');
+    background-image: url('/backG1.jpg');
 /*    backdrop-filter: blur(2px);*/
     background-repeat: no-repeat;
     background-position: center;
