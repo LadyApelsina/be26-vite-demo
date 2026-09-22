@@ -23,11 +23,13 @@ export class Books {
         updateBook(this.id, {isRead: this.isRead})
         //updateBook(this.id, this.isRead)
         if (this.isRead) {
-        this.reviewDiv.style.display = 'flex'
-        this.haveReadBtn.classList.add('readBtnActive')
+          this.reviewDiv.style.display = 'flex'
+          this.haveReadBtn.classList.add('readBtnActive')
+          this.haveReadBtn.innerText = "I haven't read"
         } else {
-        this.reviewDiv.style.display = 'none'
-        this.haveReadBtn.classList.remove('readBtnActive')
+            this.reviewDiv.style.display = 'none'
+            this.haveReadBtn.classList.remove('readBtnActive')
+            this.haveReadBtn.innerText = "I have read"
     }
     } 
     addScore(value){
@@ -183,11 +185,11 @@ export class Books {
     deleteBookBtn.innerText = 'X'
     deleteBookBtn.addEventListener('click', () => this.delete())
 
-    // ⭐ Lägg tillbaka dessa
+    //Lägg tillbaka dessa
     imgDiv.appendChild(img)
     imgDiv.appendChild(deleteBookBtn)
 
-    // ⭐ Lägg infoDiv i wrapper
+    //Lägg infoDiv i wrapper
     infoDiv.appendChild(likeBookBtn)
     infoDiv.appendChild(titelP)
     infoDiv.appendChild(authorP)

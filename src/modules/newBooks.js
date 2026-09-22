@@ -41,6 +41,7 @@ bookForm.addEventListener('submit', async (event) => {
         New book added!🔖 
         Titel:${newBook.titel}
         Author: ${newBook.author}
+        Thank you for your contribution! 
         ------------------------`)
 
         bookForm.reset()

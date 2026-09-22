@@ -1,46 +1,51 @@
 import {getFirebaseBooks} from './modules/firebase.js'
 import {Books} from './modules/Books.js'
 import './modules/newBooks.js'
-//import {} from '.modules/newBooks.js'
 
 const asideBox = document.getElementById("asideWrapper")
 const asideDiv = document.getElementById('asideDiv')
 const openBtn = document.getElementById("asideBtn")
 const closeBtn = document.getElementById("closeAsideBtn")
 
-// Öppna form
+//? Öppna form
 openBtn.addEventListener("click", () => {
   asideBox.style.display = "block"
   asideDiv.style.display = "block"
 })
   
-// Stäng form
+//? Stäng form
 closeBtn.addEventListener("click", () => {
   asideBox.style.display = "none"
   asideDiv.style.display = "none"
 })
 
-//!
-async function init() {
+async function loadBooks() {
+  try {
     const data = await getFirebaseBooks()
 
     for (const id in data) {
-        const bookObj = {
-            id: id,
-            titel: data[id].titel,
-            author: data[id].author,
-            imgUrl: data[id].imgUrl,
-            isRead: data[id].isRead,
-            score: data[id].score,
-            isLiked: data[id].isLiked
-        }
+      const bookObj = {
+        id: id,
+        titel: data[id].titel,
+        author: data[id].author,
+        imgUrl: data[id].imgUrl,
+        isRead: data[id].isRead,
+        score: data[id].score,
+        isLiked: data[id].isLiked
+      }
 
-        const book = new Books(bookObj)
-        book.render()
+      const book = new Books(bookObj)
+      book.render()
     }
+
+  } catch (error) {
+    console.error("Kunde inte ladda böcker från Firebase:", error)
+  }
 }
 
-init()
+loadBooks()
+
+
 //! Test 1
 /*
 readBtn.addEventListener('click', () => {
