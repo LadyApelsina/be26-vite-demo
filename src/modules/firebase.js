@@ -63,10 +63,3 @@ export async function deleteBook(id) {
         throw error
     }
 }
-
-/*
-getFirebaseBooks()
-postNewBook(bookData)
-updateBook(id, partialData)
-deleteBook(id)
-*/
